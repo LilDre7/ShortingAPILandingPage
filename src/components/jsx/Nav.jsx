@@ -20,7 +20,7 @@ const Nav = () => {
         </div>
         <div
           className={`absolute top-full ${
-            isShow ? "left-16 z-50 w-[65%]" : "-left-full"
+            isShow ? "left-0 z-50 w-[18rem]" : "-left-full"
           } duration-300 flex flex-col gap-5 font-[600] bg-[#3f2a5d] pt-3 h-[20rem] w-full rounded-xl `}
         >
           <ul className="flex flex-col gap-5 p-5">
