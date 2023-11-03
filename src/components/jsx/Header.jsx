@@ -14,7 +14,7 @@ const header = () => {
             alt="Illustration Working"
           />
         </div>
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-5xl font-bold text-gray-900 text-center mt-2 ">
           More than just shorter links
         </h1>
         <p className="mt-3 text-lg text-gray-600">
