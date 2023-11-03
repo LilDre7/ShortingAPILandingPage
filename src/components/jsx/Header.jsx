@@ -1,5 +1,6 @@
 // 🐋
 import Nav from "./Nav";
+import ButtonGetStarted from "./ButtonGetStarted";
 
 const header = () => {
   return (
@@ -20,7 +21,9 @@ const header = () => {
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </p>
-        <div className=""></div>
+        <div className="">
+          <ButtonGetStarted />
+        </div>
       </header>
     </>
   );
