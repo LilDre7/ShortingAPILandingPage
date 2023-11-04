@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/jsx/Header";
 import ShortLInk from "../components/astro/ShortLInk.astro";
+import ShortLink from "../components/jsx/ShortLink";
 ---
 
 <Layout title="Home Page">
   <!-- <Header client:only /> -->
-  <ShortLInk />
+  <!-- <ShortLInk /> -->
+  <ShortLink client:only />
 </Layout>
