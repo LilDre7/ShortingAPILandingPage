@@ -15,15 +15,15 @@ const ShortLink = () => {
 
     const option = {
       method: "GET",
-      url: "https://shortly-url-shortener.p.rapidapi.com/",
-      params: {
-        url: "https://www.entryrise.com",
-        format: "plain",
-      },
-      headers: {
-        "X-RapidAPI-Key": "f98bd1ad43msh7946da55a36f30fp1c9463jsndd4467631146",
-        "X-RapidAPI-Host": "shortly-url-shortener.p.rapidapi.com",
-      },
+      url: "https://shortly1.p.rapidapi.com/%7BPATH%7D",
+      // params: {
+      //   url: "https://www.entryrise.com",
+      //   format: "json",
+      // },
+      // headers: {
+      //   "X-RapidAPI-Key": "f98bd1ad43msh7946da55a36f30fp1c9463jsndd4467631146",
+      //   "X-RapidAPI-Host": "shortly-url-shortener.p.rapidapi.com",
+      // },
     };
 
     try {
