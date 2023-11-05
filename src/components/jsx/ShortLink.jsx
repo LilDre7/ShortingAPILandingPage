@@ -15,6 +15,8 @@ const ShortLink = () => {
       long_url: IsoriginalUrl,
     };
 
+    console.log(IsoriginalUrl);
+
     try {
       const response = await axios.post(ORIGINAL__URL, requestData, {
         headers: {
@@ -29,15 +31,6 @@ const ShortLink = () => {
     } catch (error) {
       console.error("Error al acortar el enlace:", error);
     }
-
-    const option = {
-      method: "POST",
-      url: ORIGINAL__URL,
-      headers: {
-        Authorization: `Bearer ${API__KEY}`,
-        "Content-Type": "application/json",
-      },
-    };
   };
 
   return (
@@ -72,20 +65,6 @@ const ShortLink = () => {
         </form>
       </div>
       {/*********🚀**** RESPONSE DATA *****🚀*******/}
-      <div className="flex flex-col mx-auto bg-[#fff] border-2 w-[340px] px-5 py-5 mt-10 rounded-xl relative overflow-hidden shadow-lg ">
-        <div className="w-full z-10">
-          <h3></h3>
-          {IsShortUrl && (
-            <p className="font-bold text-[#2BD0D0]"> {IsShortUrl} </p>
-          )}
-          <button
-            type="submit"
-            className="text-white bg-[#2BD0D0] w-full py-4 mt-5 rounded-lg z-50 font-bold text-xl tracking-wide"
-          >
-            Copy
-          </button>
-        </div>
-      </div>
     </main>
   );
 };
