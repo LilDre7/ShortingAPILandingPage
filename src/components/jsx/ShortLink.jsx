@@ -15,8 +15,6 @@ const ShortLink = () => {
       long_url: IsoriginalUrl,
     };
 
-    console.log(IsoriginalUrl);
-
     try {
       const response = await axios.post(ORIGINAL__URL, requestData, {
         headers: {
@@ -26,11 +24,15 @@ const ShortLink = () => {
       });
 
       const shortLink = response.data.link;
-      console.log(shortLink);
       setShortUrl(shortLink);
     } catch (error) {
       console.error("Error al acortar el enlace:", error);
     }
+  };
+
+  const handleSubmitCopy = () => {
+    navigator.clipboard.writeText(IsShortUrl);
+    alert("Copiado al portapapeles");
   };
 
   return (
@@ -65,6 +67,26 @@ const ShortLink = () => {
         </form>
       </div>
       {/*********🚀**** RESPONSE DATA *****🚀*******/}
+      {IsoriginalUrl && (
+        <div className="flex flex-col mx-auto bg-[#fff] w-[340px] py-5 mt-10 rounded-xl relative overflow-hidden shadow-lg ">
+          <div className="w-full z-10">
+            <h3 className="py-2 font-bold text-[#000000] px-5 ">
+              {IsoriginalUrl}
+            </h3>
+            <hr className="w-full border-b-2 border-gray-400" />
+            {IsShortUrl && (
+              <p className="font-bold text-[#2BD0D0] px-5 py-3">{IsShortUrl}</p>
+            )}
+            <button
+              type="submit"
+              onClick={handleSubmitCopy}
+              className="text-white bg-[#2BD0D0]  mx-auto flex justify-center items-center w-[299px] h-[60px] rounded-lg z-50 font-bold text-xl tracking-wide mt-3 "
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 };
