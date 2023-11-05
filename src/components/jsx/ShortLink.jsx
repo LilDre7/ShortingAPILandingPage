@@ -8,31 +8,36 @@ const ShortLink = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const URL = "https://shortly-url-shortener.p.rapidapi.com/";
-    const APIKEY = "f98bd1ad43msh7946da55a36f30fp1c9463jsndd4467631146";
-    const ORIGINALURL = "https://www.entryrise.com";
-    const SHORTURL = "shortly-url-shortener.p.rapidapi.com";
+    const API__KEY = "0cefaad9e7da25465c3380ec5312062b03b2bc02";
+    const ORIGINAL__URL = "https://api-ssl.bitly.com/v4/shorten";
 
-    const option = {
-      method: "GET",
-      url: "https://shortly1.p.rapidapi.com/%7BPATH%7D",
-      // params: {
-      //   url: "https://www.entryrise.com",
-      //   format: "json",
-      // },
-      // headers: {
-      //   "X-RapidAPI-Key": "f98bd1ad43msh7946da55a36f30fp1c9463jsndd4467631146",
-      //   "X-RapidAPI-Host": "shortly-url-shortener.p.rapidapi.com",
-      // },
+    const requestData = {
+      long_url: IsoriginalUrl,
     };
 
     try {
-      const response = await axios.request(option);
-      setShortUrl(response.data);
-      console.log(response.data);
+      const response = await axios.post(ORIGINAL__URL, requestData, {
+        headers: {
+          Authorization: `Bearer ${API__KEY}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      const shortLink = response.data.link;
+      console.log(shortLink);
+      setShortUrl(shortLink);
     } catch (error) {
-      console.error(error);
+      console.error("Error al acortar el enlace:", error);
     }
+
+    const option = {
+      method: "POST",
+      url: ORIGINAL__URL,
+      headers: {
+        Authorization: `Bearer ${API__KEY}`,
+        "Content-Type": "application/json",
+      },
+    };
   };
 
   return (
@@ -65,8 +70,8 @@ const ShortLink = () => {
             Shorten it!
           </button>
         </form>
-        {IsShortUrl && <p> {IsShortUrl} </p>}
       </div>
+      <div className="bg-red-500">{IsShortUrl && <p> {IsShortUrl} </p>}</div>
     </main>
   );
 };
