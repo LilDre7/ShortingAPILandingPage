@@ -6,10 +6,38 @@ import RedSocial from "./RedSocial.astro";
 <Layout title="footer">
   <footer class="min-h-screen bg-[#2d2240] flex flex-col items-center">
     <div>
-      <img src="/public/images/logo.svg" alt="" />
+      <h2 class="text-white text-4xl font-bold py-8 tracking-wide">Shortly</h2>
     </div>
-    <div>
+    <div class="text-center">
+      <h4>Features</h4>
+      <ul>
+        <li>Link Shortening</li>
+        <li>Branded Links</li>
+        <li>Analytics</li>
+      </ul>
+      <h4>Resources</h4>
+      <ul>
+        <li>Blog</li>
+        <li>Developer</li>
+        <li>Support</li>
+      </ul>
+      <h4>Company</h4>
+      <ul>
+        <li>About</li>
+        <li>Our Team</li>
+        <li>Careers</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="flex flex-row justify-center items-center">
       <RedSocial />
     </div>
   </footer>
 </Layout>
+
+<style>
+  h4 {
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
+  }
+</style>

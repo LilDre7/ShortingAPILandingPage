@@ -4,12 +4,12 @@ import redesSociales from "../../utils/RedesSociales";
 ---
 
 <Layout title="">
-  <div>
-    <div>
+  <div class="">
+    <div class="flex flex-row justify-center items-center">
       {
         redesSociales.map((imgSocial, index) => (
           <>
-            <img class="" src={imgSocial.img} alt={imgSocial.alt} />
+            <img class="text-white" src={imgSocial.img} alt={imgSocial.alt} />
           </>
         ))
       }
