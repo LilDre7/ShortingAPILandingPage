@@ -20,11 +20,12 @@ const CardCustom = () => {
   };
 
   return (
-    <div className=" w-full flex flex-col justify-center items-center">
-      <div className="bg-black">
-        <div>
+    <div className=" w-full flex flex-col justify-center items-center bg-red-500">
+      <div className="bg-white h-52">
+        <div className="bg-violet-900">
           <img src="/public/images/icon-brand-recognition.svg" alt="" />
         </div>
+        <div>{CardCustom.map()}</div>
       </div>
     </div>
   );
