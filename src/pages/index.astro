@@ -3,11 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/jsx/Header";
 import ShortLink from "../components/jsx/ShortLink";
 import CardCustom from "../components/jsx/CardCustom";
+import TextInfo from "../components/astro/TextInfo.astro";
+import CardBoot from "../components/astro/CardBoot.astro";
 ---
 
 <Layout title="Home Page">
   <Header client:only />
   <!-- <ShortLInk /> -->
   <ShortLink client:only />
+  <TextInfo />
   <CardCustom client:only />
+  <CardBoot />
 </Layout>

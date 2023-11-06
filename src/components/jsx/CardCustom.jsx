@@ -2,7 +2,7 @@ import infoCard from "../../utils/infoCard";
 
 const Card = () => {
   return (
-    <article className="absolute left-0 right-0 z-50 ">
+    <article className="relative left-0 right-0 z-50 ">
       {infoCard.map((card, index) => (
         <CardCustom key={index} card={card} />
       ))}
