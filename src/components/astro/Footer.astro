@@ -1,16 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import redesSociales from "../../utils/RedesSociales";
-
-redesSociales.map((index, redSocial) => {
-  console.log(redSocial);
-});
+import RedSocial from "./RedSocial.astro";
 ---
 
 <Layout title="footer">
-  <footer>
+  <footer class="min-h-screen bg-[#2d2240] flex flex-col items-center">
     <div>
       <img src="/public/images/logo.svg" alt="" />
+    </div>
+    <div>
+      <RedSocial />
     </div>
   </footer>
 </Layout>

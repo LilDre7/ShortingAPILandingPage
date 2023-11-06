@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import redesSociales from "../../utils/RedesSociales";
+---
+
+<Layout title="">
+  <div>
+    <div>
+      {
+        redesSociales.map((imgSocial, index) => (
+          <>
+            <img class="" src={imgSocial.img} alt={imgSocial.alt} />
+          </>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
