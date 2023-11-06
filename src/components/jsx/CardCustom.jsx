@@ -25,7 +25,7 @@ const CardCustom = () => {
         <div className="bg-violet-900">
           <img src="/public/images/icon-brand-recognition.svg" alt="" />
         </div>
-        <div>{CardCustom.map()}</div>
+        <div>{infoCard.Brand}</div>
       </div>
     </div>
   );
