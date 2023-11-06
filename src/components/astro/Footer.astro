@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import redesSociales from "../../utils/RedesSociales";
+
+redesSociales.map((index, redSocial) => {
+  console.log(redSocial);
+});
+---
+
+<Layout title="footer">
+  <footer>
+    <div>
+      <img src="/public/images/logo.svg" alt="" />
+    </div>
+  </footer>
+</Layout>
