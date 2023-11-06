@@ -1,9 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import ReactConfetti from "react-confetti";
+import JSConfetti from "js-confetti";
 
 const ShortLink = () => {
   const [IsoriginalUrl, setoriginalUrl] = useState("");
   const [IsShortUrl, setShortUrl] = useState("");
+
+  const jsConfetti = new JSConfetti();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,15 +28,22 @@ const ShortLink = () => {
       });
 
       const shortLink = response.data.link;
+
       setShortUrl(shortLink);
+      jsConfetti.addConfetti();
     } catch (error) {
       console.error("Error al acortar el enlace:", error);
     }
   };
 
   const handleSubmitCopy = () => {
-    navigator.clipboard.writeText(IsShortUrl);
-    alert("Copiado al portapapeles");
+    if (IsShortUrl === "") {
+      return;
+    } else {
+      navigator.clipboard.writeText(IsShortUrl);
+      alert("Copiado al portapapeles");
+      jsConfetti.addConfetti();
+    }
   };
 
   return (
@@ -80,10 +91,13 @@ const ShortLink = () => {
             <button
               type="submit"
               onClick={handleSubmitCopy}
-              className="text-white bg-[#2BD0D0]  mx-auto flex justify-center items-center w-[299px] h-[60px] rounded-lg z-50 font-bold text-xl tracking-wide mt-3 "
+              className={`text-white ${
+                IsShortUrl ? "bg-[#2b39d0] " : "bg-[#2BD0D0]  "
+              }  mx-auto flex justify-center items-center w-[299px] h-[60px] rounded-lg z-50 font-bold text-xl tracking-wide mt-3 `}
             >
-              Copy
+              {IsShortUrl ? "Copied!" : "Copy"}
             </button>
+            <ReactConfetti />
           </div>
         </div>
       )}
