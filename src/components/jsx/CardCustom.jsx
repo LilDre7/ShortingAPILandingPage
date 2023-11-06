@@ -6,7 +6,7 @@ const Card = () => {
       {infoCard.map((card, index) => (
         <CardCustom key={index} card={card} />
       ))}
-      <div className="w-[0.8rem] bg-violet-600 h-[27rem] absolute -z-10 left-0 right-0 top-[17rem] mx-auto"></div>
+      <div className="w-[0.6rem] bg-[#2BD0D0] h-[27rem] absolute -z-10 left-0 right-0 top-[17rem] mx-auto"></div>
     </article>
   );
 };

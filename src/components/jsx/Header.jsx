@@ -6,7 +6,7 @@ const header = () => {
   return (
     <>
       <Nav />
-      <header className="text-white flex flex-col items-center justify-center w-full h-screen overflow-hidden  ">
+      <header className="text-white flex flex-col items-center justify-center w-full min-h-screen overflow-hidden mt-16 ">
         <div className="mb-3">
           <img
             className="ml-[23px] w-[135%] max-w-[800px] "

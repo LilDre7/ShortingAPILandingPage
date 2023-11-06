@@ -48,7 +48,7 @@ const ShortLink = () => {
 
   return (
     <main className="">
-      <div className="flex flex-col mx-auto bg-[#3b3054] border-2 w-[340px] px-5 py-5 mt-10 rounded-xl relative overflow-hidden shadow-lg shadow-slate-50">
+      <div className="flex flex-col mx-auto bg-[#3b3054] border-2 w-[340px] px-5 py-5  rounded-xl relative overflow-hidden shadow-lg shadow-slate-50">
         <svg
           className="absolute overflow-hidden bottom-0 left-0 z-10"
           xmlns="http://www.w3.org/2000/svg"
