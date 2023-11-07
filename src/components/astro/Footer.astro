@@ -7,36 +7,33 @@ import RedSocial from "./RedSocial.astro";
   <footer
     class="min-h-screen bg-[#21192f] flex flex-col justify-center items-center md:bg-[#000000e1]"
   >
-    <div class="lg:max-w-[1000px] lg:grid lg:grid-cols-3 lg:items-center">
+    <div class="lg:max-w-[1000px] lg:grid lg:grid-cols-3">
       <h2 class="text-white text-4xl font-bold py-4 tracking-wide text-center">
         Shortly
       </h2>
 
-      <div class="text-center lg:w-full lg:bg-violet-500 lg:flex">
-        <h4>Features</h4>
+      <div class="text-center lg:w-full lg:bg-violet-500 lg:grid grid-cols-3">
         <ul>
+          <h4>Features</h4>
           <li>Link Shortening</li>
           <li>Branded Links</li>
           <li>Analytics</li>
         </ul>
-        <h4>Resources</h4>
         <ul>
+          <h4>Resources</h4>
           <li>Blog</li>
           <li>Developer</li>
           <li>Support</li>
         </ul>
-        <h4>Company</h4>
         <ul>
+          <h4>Company</h4>
           <li>About</li>
           <li>Our Team</li>
           <li>Careers</li>
           <li>Contact</li>
         </ul>
       </div>
-      <div class="flex
-      flex-row
-      justify-center
-      items-center">
+      <div class="flex flex-row justify-center items-center">
         <RedSocial />
       </div>
     </div>
@@ -68,6 +65,21 @@ import RedSocial from "./RedSocial.astro";
     }
     li {
       font-size: 1.5rem;
+    }
+  }
+  @media (min-width: 1000px) {
+    h2 {
+      font-size: 2.7rem;
+    }
+    h4 {
+      font-size: 1.3rem;
+    }
+    li {
+      font-size: 1rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>
