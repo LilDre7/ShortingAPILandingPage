@@ -4,9 +4,11 @@ import RedSocial from "./RedSocial.astro";
 ---
 
 <Layout title="footer">
-  <footer class="min-h-screen bg-[#2d2240] flex flex-col items-center">
+  <footer
+    class="min-h-screen bg-[#21192f] flex flex-col justify-center items-center md:bg-[#000000e1]"
+  >
     <div>
-      <h2 class="text-white text-4xl font-bold py-8 tracking-wide">Shortly</h2>
+      <h2 class="text-white text-4xl font-bold py-4 tracking-wide">Shortly</h2>
     </div>
     <div class="text-center">
       <h4>Features</h4>
@@ -32,12 +34,34 @@ import RedSocial from "./RedSocial.astro";
     <div class="flex flex-row justify-center items-center">
       <RedSocial />
     </div>
+
+    <style>
+      h4 {
+        color: white;
+        font-size: 1rem;
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+      }
+      ul {
+        padding-top: 0.3rem;
+        padding-bottom: 0.2rem;
+      }
+      li {
+        color: gray;
+        padding: 0.1rem;
+      }
+      @media (min-width: 768px) {
+        h2 {
+          font-size: 2.7rem;
+          padding-bottom: 35px;
+        }
+        h4 {
+          font-size: 1.3rem;
+        }
+        li {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
   </footer>
 </Layout>
-
-<style>
-  h4 {
-    padding-top: 0.3rem;
-    padding-bottom: 1rem;
-  }
-</style>
