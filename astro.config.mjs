@@ -10,5 +10,5 @@ export default defineConfig({
     open: true,
   },
   site: "https://LilDre7.github.io",
-  base: "/my-repo",
+  base: "/ShortingAPILandingPage",
 });
