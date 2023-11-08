@@ -9,4 +9,6 @@ export default defineConfig({
   server: {
     open: true,
   },
+  site: "https://LilDre7.github.io",
+  base: "/my-repo",
 });
