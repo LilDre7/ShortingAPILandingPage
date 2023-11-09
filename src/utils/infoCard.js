@@ -7,12 +7,12 @@ const infoCard = [
   {
     title: "Detailed Records",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate voluptatibus iust",
-    img: "icon-detailed-records.svg",
+    img: "images/icon-detailed-records.svg",
   },
   {
     title: "Fully Customizable",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum cupiditate voluptatibus iust",
-    img: "/icon-fully-customizable.svg",
+    img: "images/icon-fully-customizable.svg",
   },
 ];
 
