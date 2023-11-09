@@ -10,7 +10,7 @@ const header = () => {
         <div className="mb-3 lg:order-3">
           <img
             className="ml-[23px] w-[135%] lg:max-w-[800px] lg:w-[100%] "
-            src="/public/images/illustration-working.svg"
+            src="/images/illustration-working.svg"
             alt="Illustration Working"
           />
         </div>

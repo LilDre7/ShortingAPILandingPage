@@ -25,7 +25,7 @@ const Nav = () => {
       <nav className={navClass}>
         <div className="flex justify-between p-3 mb-2 items-center h-14 md:flex-row md:mb-0">
           <div className="lg:pl-10">
-            <img src="/public/images/logo.svg" alt="" />
+            <img src="/images/logo.svg" alt="" />
           </div>
           <div className="md:hidden">
             <i onClick={handleClickShow} className={menuButtonClass}></i>
