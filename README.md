@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Astro Starter Kit: Basicsdddd
 
 ```sh
 npm create astro@latest -- --template basics
